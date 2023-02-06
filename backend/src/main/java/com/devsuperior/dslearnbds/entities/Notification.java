@@ -25,7 +25,7 @@ public class Notification implements Serializable {
 	
 	@Column(columnDefinition = "TIMESTAMP WITH TIME ZONE")
 	private Instant moment;
-	private boolean read = false;
+	private boolean read;
 	private String route;
 	
 	@ManyToOne
