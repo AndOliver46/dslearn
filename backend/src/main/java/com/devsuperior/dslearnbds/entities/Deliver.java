@@ -25,23 +25,25 @@ public class Deliver implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String uri;
-	
+
 	@Column(columnDefinition = "TIMESTAMP WITH TIME ZONE")
 	private Instant moment;
-	
+
 	private DeliverStatus status;
 	private String feedback;
 	private Integer correctCount;
-	
+
 	@ManyToOne
-	@JoinColumn(name = "user_id")
-	@JoinColumn(name = "offer_id")
+	@JoinColumns({
+		@JoinColumn(name = "user_id"), 
+		@JoinColumn(name = "offer_id")
+	})
 	private Enrollment enrollment;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "lesson_id")
 	private Lesson lesson;
-	
+
 	public Deliver() {
 	}
 
@@ -138,5 +140,5 @@ public class Deliver implements Serializable {
 		Deliver other = (Deliver) obj;
 		return Objects.equals(id, other.id);
 	}
-	
+
 }
