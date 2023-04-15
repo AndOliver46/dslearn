@@ -1,22 +1,36 @@
-Modelo conceitual sistema:
+## System Overview
+
+The system consists of a teaching platform that maintains information about courses, their classes and students, as well as a forum for questions and answers about course content. System actors can be students and teachers. There are also administrator users, who are the only ones authorized to register courses and classes.</br>
+A course is made up of several “resources”, which are groups of content. These resources can be learning paths, bonuses, external links, and the course Q&A forum itself. Each resource can contain sections, and these sections in turn will contain the lessons, which can be video and/or text content, or tasks to be delivered by students.</br>
+A task can have a weight, a due date, a number of questions and the minimum amount of correct answers needed to be accepted. When a student deliver a taks to a teacher, it waits for feedback the feedback, and it can be accepted or rejected.</br>
+Each new class of the course corresponds to an offer or edition of this course, which has a start and end date. Different offers of the same course may have slight variations in content, depending on the need for customization for each class.</br>
+Users (students and teachers) must receive notifications.</br>
+
+As for the Q&A forum, this consists of a collection of threads (with a title and description of the question), and each thread can have multiple replies.
+
+The general forum requirements are:</br>
+List topics, with the following filter options:</br>
+By resource/section/class</br>
+By text (topic title and/or body)</br>
+Questions asked only by logged-in user</br>
+Create topic: title, body</br>
+Reply topic</br>
+Mark/unmark upvote on question (cannot be the author) </br>
+Mark/unmark upvote on reply (cannot be the author)</br>
+Mark/unmark best answer (topic author and instructor only) </br>
+
+## Run requirements:
+Maven </br>
+Java 17 >
+
+## Instructions:
+1° Clone project </br>
+2° Open terminal </br>
+3° $ cd /backend </br>
+4° $ mvn spring-boot:run </br>
+
+Postman Collection: (https://github.com/AndOliver46/dslearn/files/11239641/BDS.3.0.DSLearn.Cap.4.postman_collection.zip)
+
+## Conceptual model of system:
 
 ![modelo-conceitual-com-forum](https://user-images.githubusercontent.com/101358552/224450828-cc797150-92a8-4315-9371-492bf712d396.png)
-
-Visão geral do sistema DSLearn
-
-O sistema consiste em uma plataforma de ensino que mantém informações de cursos, suas turmas e alunos, bem como um fórum para perguntas e respostas sobre os conteúdos do curso. Os atores do sistema podem ser alunos e professores. Há também usuários administradores, que são os únicos autorizados a cadastrar cursos e turmas.
-Um curso é composto de vários “recursos”, que são grupos de conteúdos. Estes recursos podem ser trilhas de aprendizado, bônus, links externos, e o próprio fórum de perguntas e respostas do curso. Cada recurso pode conter seções, e estas seções por sua vez é que vão conter as aulas, que podem ser conteúdos em vídeo e/ou texto, ou tarefas para serem entregues pelos alunos.
-Uma tarefa pode ter um peso, uma data de entrega, um número de questões e a quantidade mínima de acertos necessários para ser aceita. Quando um aluno entrega a tarefa, esta fica aguardando pelo feedback do professor, e ela pode ser aceita ou rejeitada.
-Cada nova turma do curso corresponde a uma oferta ou edição deste curso, que possui uma data de início e fim. Diferentes ofertas do mesmo curso podem ter pequenas variações no conteúdo, conforme a necessidade de customização para cada turma.
-Os usuários (alunos e professores) devem receber notificações.
-
-Com relação ao fórum de perguntas e respostas, este consiste em uma coleção de tópicos (com um título e a descrição da pergunta), e cada tópico pode ter várias respostas. Os requisitos gerais do fórum são:
-Listar tópicos, com as seguintes opções de filtro:
-Por recurso/seção/aula
-Por texto (título e/ou corpo do tópico)
-Perguntas feitas apenas pelo usuário logado
-Criar tópico: título, corpo
-Responder tópico
-Marcar/desmarcar upvote em pergunta (não pode ser o autor)
-Marcar/desmarcar upvote em resposta (não pode ser o autor)
-Marcar/desmarcar melhor resposta (somente autor do tópico e instrutor)
