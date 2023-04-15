@@ -25,9 +25,10 @@ Java 17 >
 
 ## Instructions:
 1° Clone project </br>
-2° Open terminal </br>
+2° Open terminal in SU mode </br>
 3° $ cd /backend </br>
 4° $ mvn spring-boot:run </br>
+5° Test endpoints with postman
 
 Postman Collection: (https://github.com/AndOliver46/dslearn/files/11239641/BDS.3.0.DSLearn.Cap.4.postman_collection.zip)
 
